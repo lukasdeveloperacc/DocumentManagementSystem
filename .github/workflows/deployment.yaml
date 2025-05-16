@@ -43,7 +43,7 @@ jobs:
           publish_branch: gh-pages
           publish_dir: Frontend/DocumentManagementSystem/dist
 
-   deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
