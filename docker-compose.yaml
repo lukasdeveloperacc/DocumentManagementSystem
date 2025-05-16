@@ -18,9 +18,12 @@ services:
       env: 
         - BACKEND_URL=http://backend
       expose:
-        - 5173
+        - 80
       networks:
         - default
+      ports:
+        - 5173:80
+
 
 networks:
   default:
