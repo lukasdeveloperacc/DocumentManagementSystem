@@ -24,12 +24,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Check Frontend folder contents
-        run: ls -la Frontend
-
-      - name: Check DocumentManagementSystem folder contents inside Frontend
-        run: ls -la Frontend/DocumentManagementSystem
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
