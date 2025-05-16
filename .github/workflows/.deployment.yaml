@@ -21,7 +21,7 @@ jobs:
           node-version: '23' 
 
       - name: Install and Build
-        working-directory: frontend/DocumentSystem
+        working-directory: Frontend/DocumentManagementSystem
         run: |
           npm install
           npm run build
