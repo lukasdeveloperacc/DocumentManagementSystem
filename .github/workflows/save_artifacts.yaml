@@ -1,4 +1,4 @@
-name: Deploy DocumentSystem to GitHub Pages
+name: Save Artifacts for Deploy DocumentSystem to GitHub Pages
 
 on:
   push:
@@ -36,17 +36,3 @@ jobs:
           force_orphan: true
           publish_branch: gh-pages
           publish_dir: Frontend/DocumentManagementSystem/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
