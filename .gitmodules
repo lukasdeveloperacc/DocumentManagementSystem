@@ -1,0 +1,8 @@
+[submodule "Backend"]
+	path = Backend
+	url = git@github.com:lukasdeveloperacc/Backend.git
+	branch = feature/DocumentManageSystem
+[submodule "Frontend"]
+	path = Frontend
+	url = git@github.com:lukasdeveloperacc/Frontend.git
+	branch = feature/DMS

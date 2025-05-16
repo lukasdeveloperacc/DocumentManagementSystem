@@ -1,0 +1,28 @@
+services:
+  backend:
+    extends:
+      file: ./Backend/DocumentManagementSystem/docker-compose.yaml
+      service: backend
+      env: 
+        - FRONTEND_URL=http://frontend:5173
+      expose:
+        - 80
+      ports:
+        - 1234:80
+      networks:
+        - default
+  frontend:
+    extends:
+      file: ./Frontend/DocumentManagementSystem/docker-compose.yaml
+      service: web
+      env: 
+        - BACKEND_URL=http://backend
+      expose:
+        - 5173
+      networks:
+        - default
+
+networks:
+  default:
+    external:
+      name: document-management-system-network
