@@ -32,6 +32,7 @@ jobs:
           VITE_FRONTEND_URL: ${{ secrets.VITE_FRONTEND_URL }}
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_CLIENT_ID }}
         run: |
+          env | grpe VITE > .env
           npm install
           npm run build
 
