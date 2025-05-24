@@ -13,7 +13,7 @@ services:
     expose:
       - 80
     ports:
-      - 1234:80
+      - 1233:80
     networks:
       - default
   frontend:
@@ -21,9 +21,10 @@ services:
       file: ./Frontend/DocumentManagementSystem/docker-compose.yaml
       service: web
     environment:
-      - VITE_BACKEND_URL=http://localhost:1234
+      - VITE_BACKEND_URL=http://localhost:1233
       - VITE_FRONTEND_URL=${GOOGLE_REDIRECT_URI}
       - VITE_GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - VITE_BASE_URL="/"
     expose:
       - 80
     networks:
