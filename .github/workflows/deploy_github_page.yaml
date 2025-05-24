@@ -33,7 +33,7 @@ jobs:
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_CLIENT_ID }}
           VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
         run: |
-          env | grpe VITE > .env
+          env | grep VITE > .env
           npm install
           npm run build
 
